@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.8
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: richard.arnold.matthews@gmail.com
+author_name: Richard Matthews
+has_binder: false
+has_settings: false
+kind: theme
+labextension_name: solarizedlighttheme
+project_short_description: A JupyterLab extension for solarized light theme
+python_name: solarizedlighttheme
+repository: git@github.com:Rich143/solarizedlighttheme.git
+test: true
+

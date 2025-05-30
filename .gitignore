@@ -1,3 +1,24 @@
+*.bundle.*
+lib/
+node_modules/
+*.log
+.eslintcache
+.stylelintcache
+*.egg-info/
+.ipynb_checkpoints
+*.tsbuildinfo
+solarizedlighttheme/labextension
+# Version file is handled by hatchling
+solarizedlighttheme/_version.py
+
+# Integration tests
+ui-tests/test-results/
+ui-tests/playwright-report/
+
+# Created by https://www.gitignore.io/api/python
+# Edit at https://www.gitignore.io/?templates=python
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -22,6 +43,8 @@ var/
 wheels/
 share/python-wheels/
 *.egg-info/
+pip-wheel-metadata/
+share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
@@ -50,11 +73,17 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+coverage/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
 *.pot
 
+<<<<<<< HEAD
 # Django stuff:
 *.log
 local_settings.py
@@ -72,6 +101,7 @@ instance/
 docs/_build/
 
 # PyBuilder
+<<<<<<< HEAD
 .pybuilder/
 target/
 
@@ -123,6 +153,13 @@ __pypackages__/
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
+target/
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
 
 # SageMath parsed files
 *.sage.py
@@ -142,6 +179,11 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
 
 # mkdocs documentation
 /site
@@ -172,3 +214,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+# End of https://www.gitignore.io/api/python
+
+# OSX files
+.DS_Store
+
+# Yarn cache
+.yarn/
