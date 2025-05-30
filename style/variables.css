@@ -29,8 +29,56 @@ all of MD as it is not optimized for dense, information rich UIs.
 /* Create the solarized light palette.
  * The bases run in increasing brightness.
  */
---solarized-base03: #002b36;
+--solarized-base01: #586e75;
 --solarized-base02: #073642;
+--solarized-base02-50-base01-50: #c0c5bc;
+--solarized-base03: #002b36;
+--solarized-base015: #abada9;
+--solarized-base00: #657b83;
+--solarized-base0: #839496;
+--solarized-base1: #93a1a1;
+--solarized-base2: #eee8d5;
+--solarized-base3: #fdf6e3;
+--solarized-base4: #fdf6e2;
+--solarized-yellow: #b58900;
+--solarized-orange: #cb4b16;
+--solarized-red: #dc322f;
+--solarized-magenta: #d33682;
+--solarized-violet: #6c71c4;
+--solarized-blue: #268bd2;
+--solarized-cyan: #2aa198;
+--solarized-green: #859900;
+--solarized-base025: #c0c5bc;
+--solarized-base035: #495664;
+
+  /* === Precomputed Solarized blends === */
+  --solarized-blue-80-base2-20: rgb(78, 157.6, 210.6);
+  --solarized-blue-60-base2-40: rgb(118, 176.2, 211.2);
+  --solarized-blue-40-base2-60: rgb(158, 194.8, 211.8);
+  --solarized-green-80-base2-20: rgb(154, 168.8, 42.6);
+  --solarized-green-60-base2-40: rgb(175, 184.6, 85.2);
+  --solarized-green-40-base2-60: rgb(196, 200.4, 127.8);
+  --solarized-orange-80-base2-20: rgb(210, 106.4, 60.2);
+  --solarized-orange-60-base2-40: rgb(217, 137.8, 98.4);
+  --solarized-orange-40-base2-60: rgb(224, 169.2, 136.6);
+  --solarized-red-80-base2-20: rgb(223.6, 86.4, 80.2);
+  --solarized-red-60-base2-40: rgb(227.2, 122.8, 113.4);
+  --solarized-red-40-base2-60: rgb(230.8, 159.2, 146.6);
+  --solarized-cyan-80-base2-20: rgb(81.2, 175.2, 164.2);
+  --solarized-cyan-60-base2-40: rgb(120.4, 189.4, 176.4);
+  --solarized-cyan-40-base2-60: rgb(159.6, 203.6, 188.6);
+
+  --solarized-blue-80-base3-20: rgb(81, 160.4, 213.4);
+
+  --solarized-blue-80-base02-20: rgb(31.8, 122, 181.2);
+  --solarized-blue-60-base02-40: rgb(25.6, 105, 152.4);
+  --solarized-blue-40-base02-60: rgb(19.4, 88, 123.6);
+
+  --solarized-red-80-base02-20: rgb(177.4, 50.8, 50.8);
+  --solarized-red-60-base02-40: rgb(134.8, 51.6, 54.6);
+  --solarized-red-40-base02-60: rgb(92.2, 52.4, 58.4);
+
+  --solarized-base01-70-base02-30: rgb(63.7, 93.2, 101.7);
 
   /* Elevation
    *
@@ -103,10 +151,10 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-border-width: 1px;
-  --jp-border-color0: var(--md-grey-400);
-  --jp-border-color1: var(--md-grey-400);
-  --jp-border-color2: var(--md-grey-300);
-  --jp-border-color3: var(--md-grey-200);
+  --jp-border-color0: var(--solarized-base015);
+  --jp-border-color1: var(--solarized-base015);
+  --jp-border-color2: var(--solarized-base02-50-base01-50);
+  --jp-border-color3: var(--solarized-base01);
   --jp-border-radius: 2px;
 
   /* UI Fonts
@@ -134,20 +182,20 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   /* Defaults use Material Design specification */
-  --jp-ui-font-color0: rgba(0, 0, 0, 1);
-  --jp-ui-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-ui-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-ui-font-color3: rgba(0, 0, 0, 0.38);
+  --jp-ui-font-color0: var(--solarized-base01);
+  --jp-ui-font-color1: var(--solarized-base00);
+  --jp-ui-font-color2: var(--solarized-base0);
+  --jp-ui-font-color3: var(--solarized-base1);
 
   /*
    * Use these against the brand/accent/warn/error colors.
    * These will typically go from light to darker, in both a dark and light theme.
    */
 
-  --jp-ui-inverse-font-color0: rgba(255, 255, 255, 1);
-  --jp-ui-inverse-font-color1: rgba(255, 255, 255, 1);
-  --jp-ui-inverse-font-color2: rgba(255, 255, 255, 0.7);
-  --jp-ui-inverse-font-color3: rgba(255, 255, 255, 0.5);
+  --jp-ui-inverse-font-color0: var(--solarized-base015);
+  --jp-ui-inverse-font-color1: var(--solarized-base01);
+  --jp-ui-inverse-font-color2: var(--solarized-base02);
+  --jp-ui-inverse-font-color3: var(--solarized-base03);
 
   /* Content Fonts
    *
@@ -175,11 +223,11 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-heading-font-weight: 500;
 
   /* Defaults use Material Design specification */
-  --jp-content-font-color0: rgba(0, 0, 0, 1);
-  --jp-content-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-content-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-content-font-color3: rgba(0, 0, 0, 0.38);
-  --jp-content-link-color: var(--md-blue-700);
+  --jp-content-font-color0: var(--solarized-base02);
+  --jp-content-font-color1: var(--solarized-green);
+  --jp-content-font-color2: var(--solarized-base00);
+  --jp-content-font-color3: var(--solarized-base1);
+  --jp-content-link-color: var(--solarized-blue);
   --jp-content-font-family:
     -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica, arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -192,7 +240,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   --jp-code-font-size: 13px;
   --jp-code-line-height: 1.3077; /* 17px for 13px base */
-  --jp-code-padding: 0.385em; /* 5px for 13px base */
+  --jp-code-padding: 5px; /* 5px for 13px base */
   --jp-code-font-family-default: menlo, consolas, 'DejaVu Sans Mono', monospace;
   --jp-code-font-family: var(--jp-code-font-family-default);
 
@@ -210,11 +258,11 @@ all of MD as it is not optimized for dense, information rich UIs.
    * theme these would go from light to dark.
    */
 
-  --jp-layout-color0: white;
-  --jp-layout-color1: white;
-  --jp-layout-color2: var(--md-grey-200);
-  --jp-layout-color3: var(--md-grey-400);
-  --jp-layout-color4: var(--md-grey-600);
+  --jp-layout-color0: var(--solarized-base4);
+  --jp-layout-color1: var(--solarized-base3);
+  --jp-layout-color2: var(--solarized-base2);
+  --jp-layout-color3: var(--solarized-base1);
+  --jp-layout-color4: #505967;
 
   /* Inverse Layout
    *
@@ -222,41 +270,41 @@ all of MD as it is not optimized for dense, information rich UIs.
    * theme these would go from dark to light.
    */
 
-  --jp-inverse-layout-color0: #111;
-  --jp-inverse-layout-color1: var(--md-grey-900);
-  --jp-inverse-layout-color2: var(--md-grey-800);
-  --jp-inverse-layout-color3: var(--md-grey-700);
-  --jp-inverse-layout-color4: var(--md-grey-600);
+  --jp-inverse-layout-color0: var(--solarized-base1);
+  --jp-inverse-layout-color1: var(--solarized-base2);
+  --jp-inverse-layout-color2: #505967;
+  --jp-inverse-layout-color3: var(--solarized-base0);
+  --jp-inverse-layout-color4: var(--solarized-base1);
 
   /* Brand/accent */
 
-  --jp-brand-color0: #ec0c4b;
-  --jp-brand-color1: #ed225d;
-  --jp-brand-color2: #ee376b;
-  --jp-brand-color3: #ee3b6e;
-  --jp-accent-color0: var(--md-green-700);
-  --jp-accent-color1: var(--md-green-500);
-  --jp-accent-color2: var(--md-green-300);
-  --jp-accent-color3: var(--md-green-100);
+  --jp-brand-color0: var(--solarized-blue);
+  --jp-brand-color1: var(--solarized-blue-80-base2-20);
+  --jp-brand-color2: var(--solarized-blue-60-base2-40);
+  --jp-brand-color3: var(--solarized-blue-40-base2-60);
+  --jp-accent-color0: var(--solarized-green);
+  --jp-accent-color1: var(--solarized-green-80-base2-20);
+  --jp-accent-color2: var(--solarized-green-60-base2-40);
+  --jp-accent-color3: var(--solarized-green-40-base2-60);
 
   /* State colors (warn, error, success, info) */
 
-  --jp-warn-color0: var(--md-orange-700);
-  --jp-warn-color1: var(--md-orange-500);
-  --jp-warn-color2: var(--md-orange-300);
-  --jp-warn-color3: var(--md-orange-100);
-  --jp-error-color0: var(--md-red-700);
-  --jp-error-color1: var(--md-red-500);
-  --jp-error-color2: var(--md-red-300);
-  --jp-error-color3: var(--md-red-100);
-  --jp-success-color0: var(--md-green-700);
-  --jp-success-color1: var(--md-green-500);
-  --jp-success-color2: var(--md-green-300);
-  --jp-success-color3: var(--md-green-100);
-  --jp-info-color0: var(--md-cyan-700);
-  --jp-info-color1: var(--md-cyan-500);
-  --jp-info-color2: var(--md-cyan-300);
-  --jp-info-color3: var(--md-cyan-100);
+  --jp-warn-color0: var(--solarized-orange);
+  --jp-warn-color1: var(--solarized-orange-80-base2-20);
+  --jp-warn-color2: var(--solarized-orange-60-base2-40);
+  --jp-warn-color3: var(--solarized-orange-40-base2-60);
+  --jp-error-color0: var(--solarized-red);
+  --jp-error-color1: var(--solarized-red-80-base2-20);
+  --jp-error-color2: var(--solarized-red-60-base2-40);
+  --jp-error-color3: var(--solarized-red-40-base2-60);
+  --jp-success-color0: var(--solarized-green);
+  --jp-success-color1: var(--solarized-green-80-base2-20);
+  --jp-success-color2: var(--solarized-green-60-base2-40);
+  --jp-success-color3: var(--solarized-green-40-base2-60);
+  --jp-info-color0: var(--solarized-cyan);
+  --jp-info-color1: var(--solarized-cyan-80-base2-20);
+  --jp-info-color2: var(--solarized-cyan-60-base2-40);
+  --jp-info-color3: var(--solarized-cyan-40-base2-60);
 
   /* Cell specific styles */
 
@@ -264,31 +312,26 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-collapser-width: 8px;
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
-  --jp-cell-editor-background: var(--md-grey-100);
-  --jp-cell-editor-border-color: var(--md-grey-300);
+  --jp-cell-editor-border-color: var(--solarized-base015);
+  --jp-cell-editor-background: var(--solarized-base2);
   --jp-cell-editor-box-shadow: inset 0 0 2px var(--md-blue-300);
-  --jp-cell-editor-active-background: var(--jp-layout-color0);
-  --jp-cell-editor-active-border-color: var(--jp-brand-color1);
+  --jp-cell-editor-active-background: var(--solarized-base3);
+  --jp-cell-editor-active-border-color: var(--jp-input-active-border-color);
   --jp-cell-prompt-width: 64px;
   --jp-cell-prompt-font-family: 'Source Code Pro', monospace;
   --jp-cell-prompt-letter-spacing: 0;
   --jp-cell-prompt-opacity: 1;
-  --jp-cell-prompt-not-active-opacity: 0.5;
-  --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
-
-  /* A custom blend of MD grey and blue 600
-   * See https://meyerweb.com/eric/tools/color-blend/#546E7A:1E88E5:5:hex */
-  --jp-cell-inprompt-font-color: #307fc1;
-
-  /* A custom blend of MD grey and orange 600
-   * https://meyerweb.com/eric/tools/color-blend/#546E7A:F4511E:5:hex */
-  --jp-cell-outprompt-font-color: #bf5b3d;
+  --jp-cell-prompt-not-active-opacity: 1;
+  --jp-cell-prompt-not-active-font-color: var(--solarized-base0);
+  --jp-cell-inprompt-font-color: var(--solarized-blue);
+  --jp-cell-outprompt-font-color: var(--solarized-orange);
 
   /* Notebook specific styles */
 
   --jp-notebook-padding: 10px;
-  --jp-notebook-select-background: var(--jp-layout-color1);
-  --jp-notebook-multiselected-color: var(--md-blue-50);
+  --jp-RenderedText-color: var(--solarized-base01);
+  --jp-notebook-select-background: var(--solarized-base3);
+  --jp-notebook-multiselected-color: var(--solarized-base2);
 
   /* The scroll padding is calculated to fill enough space at the bottom of the
   notebook to show one single-line cell (with appropriate padding) at the top
@@ -303,13 +346,13 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Rendermime styles */
 
-  --jp-rendermime-error-background: #fdd;
-  --jp-rendermime-table-row-background: var(--md-grey-100);
-  --jp-rendermime-table-row-hover-background: var(--md-light-blue-50);
+  --jp-rendermime-error-background: #dc322f38;
+  --jp-rendermime-table-row-background: var(--jp-layout-color2);
+  --jp-rendermime-table-row-hover-background: rgba(3, 169, 244, 0.2);
 
   /* Dialog specific styles */
 
-  --jp-dialog-background: rgba(0, 0, 0, 0.25);
+  --jp-dialog-background: rgba(0, 0, 0, 0.6);
 
   /* Console specific styles */
 
@@ -317,12 +360,12 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Toolbar specific styles */
 
-  --jp-toolbar-border-color: var(--jp-border-color1);
+  --jp-toolbar-border-color: var(--jp-layout-color3);
   --jp-toolbar-micro-height: 8px;
-  --jp-toolbar-background: var(--jp-layout-color1);
-  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.24);
+  --jp-toolbar-background: var(--jp-layout-color0);
+  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
   --jp-toolbar-header-margin: 4px 4px 0 4px;
-  --jp-toolbar-active-background: var(--md-grey-300);
+  --jp-toolbar-active-background: var(--jp-layout-color0);
 
   /* Statusbar specific styles */
 
@@ -330,45 +373,47 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Input field styles */
 
-  --jp-input-box-shadow: inset 0 0 2px var(--md-blue-300);
-  --jp-input-active-background: var(--jp-layout-color1);
-  --jp-input-hover-background: var(--jp-layout-color1);
-  --jp-input-background: var(--md-grey-100);
-  --jp-input-border-color: var(--jp-border-color1);
-  --jp-input-active-border-color: var(--jp-brand-color1);
+  /*--jp-input-box-shadow: inset 0 0 2px var(--md-blue-300);*/
+  --jp-input-active-background: var(--jp-layout-color0);
+  --jp-input-hover-background: var(--jp-layout-color2);
+  --jp-input-background: var(--jp-layout-color3);
+  --jp-input-border-color: var(--jp-border-color2);
+  --jp-input-active-border-color: var(--solarized-blue-80-base3-20);
+  --jp-input-active-box-shadow-color: rgba(19, 124, 189, 0.3);
 
   /* General editor styles */
 
-  --jp-editor-selected-background: #d9d9d9;
-  --jp-editor-selected-focused-background: #d7d4f0;
+  --jp-editor-selected-background: var(--jp-layout-color0);
+  --jp-editor-selected-focused-background: rgba(33, 150, 243, 0.24);
   --jp-editor-cursor-color: var(--jp-ui-font-color0);
 
   /* Code mirror specific styles */
 
-  --jp-mirror-editor-keyword-color: #008000;
-  --jp-mirror-editor-atom-color: #88f;
-  --jp-mirror-editor-number-color: #080;
-  --jp-mirror-editor-def-color: #00f;
-  --jp-mirror-editor-variable-color: var(--md-grey-900);
-  --jp-mirror-editor-variable-2-color: #05a;
-  --jp-mirror-editor-variable-3-color: #085;
-  --jp-mirror-editor-punctuation-color: #05a;
-  --jp-mirror-editor-property-color: #05a;
-  --jp-mirror-editor-operator-color: #a2f;
-  --jp-mirror-editor-comment-color: #408080;
-  --jp-mirror-editor-string-color: #ba2121;
-  --jp-mirror-editor-string-2-color: #708;
-  --jp-mirror-editor-meta-color: #a2f;
-  --jp-mirror-editor-qualifier-color: #555;
-  --jp-mirror-editor-builtin-color: #008000;
+  --jp-mirror-editor-keyword-color: var(--solarized-base01);
+  --jp-mirror-editor-keyword-weight: bold;
+  --jp-mirror-editor-atom-color: var(--solarized-blue);
+  --jp-mirror-editor-number-color: var(--solarized-magenta);
+  --jp-mirror-editor-def-color: var(--solarized-base02);
+  --jp-mirror-editor-variable-color: var(--solarized-base00);
+  --jp-mirror-editor-variable-2-color: var(--solarized-blue);
+  --jp-mirror-editor-variable-3-color: var(--solarized-blue);
+  --jp-mirror-editor-punctuation-color: var(--solarized-base01);
+  --jp-mirror-editor-property-color: var(--solarized-blue);
+  --jp-mirror-editor-operator-color: var(--solarized-base0);
+  --jp-mirror-editor-comment-color: var(--solarized-base1);
+  --jp-mirror-editor-string-color: var(--solarized-base0);
+  --jp-mirror-editor-string-2-color: var(--solarized-cyan);
+  --jp-mirror-editor-meta-color: var(--solarized-magenta);
+  --jp-mirror-editor-qualifier-color: #222;
+  --jp-mirror-editor-builtin-color: var(--solarized-base02);
   --jp-mirror-editor-bracket-color: #997;
-  --jp-mirror-editor-tag-color: #170;
-  --jp-mirror-editor-attribute-color: #00c;
-  --jp-mirror-editor-header-color: blue;
-  --jp-mirror-editor-quote-color: #090;
-  --jp-mirror-editor-link-color: #00c;
-  --jp-mirror-editor-error-color: #f00;
-  --jp-mirror-editor-hr-color: #999;
+  --jp-mirror-editor-tag-color: var(--solarized-green);
+  --jp-mirror-editor-attribute-color: var(--solarized-blue);
+  --jp-mirror-editor-header-color: var(--solarized-green);
+  --jp-mirror-editor-quote-color: var(--solarized-cyan);
+  --jp-mirror-editor-link-color: var(--solarized-blue);
+  --jp-mirror-editor-error-color: var(--solarized-red);
+  --jp-mirror-editor-hr-color: #222;
 
   /* User colors */
 
@@ -384,22 +429,62 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   --jp-jupyter-icon-color: var(--md-orange-900);
   --jp-notebook-icon-color: var(--md-orange-700);
-  --jp-json-icon-color: var(--md-orange-700);
-  --jp-console-icon-background-color: var(--md-blue-700);
-  --jp-console-icon-color: white;
-  --jp-terminal-icon-background-color: var(--md-grey-200);
-  --jp-terminal-icon-color: var(--md-grey-800);
-  --jp-text-editor-icon-color: var(--md-grey-200);
-  --jp-inspector-icon-color: var(--md-grey-200);
-  --jp-switch-color: var(--md-grey-400);
-  --jp-switch-true-position-color: var(--md-orange-700);
+  --jp-json-icon-color: var(--solarized-orange);
+  --jp-console-icon-background-color: var(--solarized-blue);
+  --jp-console-icon-color: var(--solarized-base3);
+  --jp-terminal-icon-background-color: var(--jp-inverse-layout-color2);
+  --jp-terminal-icon-color: var(--solarized-base02);
+  --jp-text-editor-icon-color: var(--solarized-base2);
+  --jp-inspector-icon-color: var(--solarized-base2);
+  --jp-switch-color: var(--solarized-base1);
+  --jp-switch-true-position-color: var(--solarized-green);
   --jp-switch-cursor-color: rgba(0, 0, 0, 0.8);
 
   /* Vega extension styles */
 
-  --jp-vega-background: white;
+  --jp-vega-background: var(--solarized-base0);
 
   /* Sidebar-related styles */
 
   --jp-sidebar-min-width: 180px;
+
+  /* Search-related styles */
+
+  --jp-search-toggle-off-opacity: 0.4;
+  --jp-search-toggle-hover-opacity: 0.7;
+  --jp-search-toggle-on-opacity: 1;
+  --jp-search-selected-match-background-color: var(--solarized-yellow);
+  --jp-search-selected-match-color: var(--solarized-base02);
+  --jp-search-unselected-match-background-color: var(
+    --jp-inverse-layout-color0
+  );
+  --jp-search-unselected-match-color: var(--jp-ui-inverse-font-color0);
+
+  /* scrollbar related styles. Supports every browser except Edge. */
+
+  --jp-scrollbar-background-color: var(--solarized-base2);
+  --jp-scrollbar-thumb-color: 21, 102, 103; /* need to specify thumb color as an RGB triplet */
+  --jp-scrollbar-endpad: 3px; /* the minimum gap between the thumb and the ends of a scrollbar */
+
+  /* hacks for setting the thumb shape. These do nothing in Firefox */
+
+  --jp-scrollbar-thumb-margin: 3.5px; /* the space in between the sides of the thumb and the track */
+  --jp-scrollbar-thumb-radius: 9px; /* set to a large-ish value for rounded endcaps on the thumb */
+
+  /* Icon colors that work well with light or dark backgrounds */
+  --jp-icon-contrast-color0: var(--solarized-violet);
+  --jp-icon-contrast-color1: var(--solarized-green);
+  --jp-icon-contrast-color2: var(--solarized-magenta);
+  --jp-icon-contrast-color3: var(--solarized-blue);
+
+  /* Button colors */
+  --jp-accept-color-normal: var(--solarized-blue);
+  --jp-accept-color-hover: var(--solarized-blue-80-base02-20);
+  --jp-accept-color-active: var(--solarized-blue-60-base02-40);
+  --jp-warn-color-normal: var(--solarized-red);
+  --jp-warn-color-hover: var(--solarized-red-80-base02-20);
+  --jp-warn-color-active: var(--solarized-red-60-base02-40);
+  --jp-reject-color-normal: var(--solarized-base0);
+  --jp-reject-color-hover: var(--solarized-base01);
+  --jp-reject-color-active: var(--solarized-base01-70-base02-30);
 }
